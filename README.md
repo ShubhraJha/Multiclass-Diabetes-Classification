@@ -41,20 +41,13 @@ The dataset contains 264 samples with 12 columns including gender, age, choleste
 6. **Evaluation**
    - Confusion Matrix and Classification Report to assess performance.
 
----
-
-## 📈 Visualizations
-
-| Correlation Matrix | Confusion Matrix |
-|--------------------|------------------|
-| ![Correlation Matrix](images/correlation_matrix.png) | ![Confusion Matrix](images/confusion_matrix.png) |
 
 ---
 
 ## 🧮 Results
 
 - **Model:** Logistic Regression  
-- **Accuracy:** *around 85-90% (varies by train-test split)*  
+- **Accuracy:** *around 88-94% (varies by train-test split)*  
 - **Best features (by coefficient magnitude):** `HbA1c`, `BMI`, `Chol`
 
 ---
@@ -66,15 +59,12 @@ The dataset contains 264 samples with 12 columns including gender, age, choleste
 - Evaluating multiclass models using **classification report & confusion matrix**
 
 ---
-
-## 🧰 Requirements
-
-Install all dependencies using:
-
-```bash
-pip install -r requirements.txt
-```
-
+Notes on Multicollinearity (VIF Analysis)
+High VIF (Variance Inflation Factor) values indicate multicollinearity — when features are highly correlated with each other.
+In this dataset, AGE, BMI, and Chol showed high VIF values, suggesting they share overlapping information with other variables.
+However, removing them caused a drop in model accuracy, meaning these features still contribute valuable predictive information.
+Therefore, each high-VIF feature was individually tested for its impact on accuracy.
+Features were retained or removed based on their actual contribution to model performance rather than VIF value alone.
 **requirements.txt**
 ```
 pandas
@@ -85,11 +75,7 @@ scikit-learn
 statsmodels
 ```
 
----
-
 ## 🚀 Future Improvements
-
-- Handle high-VIF features (dimensionality reduction)
 - Try advanced models like **RandomForest**, **XGBoost**
 - Add **ROC-AUC** visualization for multiclass classification
 
