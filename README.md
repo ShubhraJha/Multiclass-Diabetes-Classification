@@ -26,8 +26,22 @@ The dataset contains 264 samples with 12 columns including gender, age, choleste
 
 ---
 
-## ⚙️ Project Workflow
 
+## Project Description
+This project applies Logistic Regression to predict different classes (types) of diabetes based on key clinical and biochemical features such as HbA1c, BMI, Cholesterol, and Age.
+The goal is to demonstrate a complete machine learning workflow, starting from data preprocessing and exploratory data analysis (EDA) to multicollinearity detection (VIF), model training, and performance evaluation.
+
+The dataset used represents a multiclass classification problem — where patients are categorized into different diabetes levels.
+
+ ## The project helps understand:
+
+- How logistic regression works for multiclass problems
+
+- The importance of feature scaling
+
+- The impact of multicollinearity on model performance
+How to interpret model coefficients and feature influence
+## ⚙️ Project Workflow
 1. **Data Loading and Cleaning**
    - Checked for missing values and duplicates.
 2. **Exploratory Data Analysis (EDA)**
