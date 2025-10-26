@@ -60,11 +60,11 @@ The dataset contains 264 samples with 12 columns including gender, age, choleste
 
 ---
 ## Notes on Multicollinearity (VIF Analysis)
-High VIF (Variance Inflation Factor) values indicate multicollinearity — when features are highly correlated with each other.
-In this dataset, **AGE**, **BMI**, and **Chol** showed high VIF values, suggesting they share overlapping information with other variables.
-However, removing them caused a drop in model accuracy, meaning these features still contribute valuable predictive information.
-Therefore, each high-VIF feature was individually tested for its impact on accuracy.
-Features were retained or removed based on their actual contribution to model performance rather than VIF value alone.
+- High VIF (Variance Inflation Factor) values indicate multicollinearity — when features are highly correlated with each other.
+- In this dataset, **AGE**, **BMI**, and **Chol** showed high VIF values, suggesting they share overlapping information with other variables.
+ However, removing them caused a drop in model accuracy, meaning these features still contribute valuable predictive information.
+ Therefore, each high-VIF feature was individually tested for its impact on accuracy.
+- Features were retained or removed based on their actual contribution to model performance rather than VIF value alone.
 **requirements.txt**
 ```
 pandas
