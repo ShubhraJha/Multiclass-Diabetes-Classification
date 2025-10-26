@@ -40,7 +40,8 @@ The dataset used represents a multiclass classification problem — where patien
 - The importance of feature scaling
 
 - The impact of multicollinearity on model performance
-How to interpret model coefficients and feature influence
+- How to interpret model coefficients and feature influence
+-I t also includes clear data visualizations, correlation heatmaps, confusion matrix, and classification metrics to evaluate model performance.
 ## ⚙️ Project Workflow
 1. **Data Loading and Cleaning**
    - Checked for missing values and duplicates.
