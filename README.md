@@ -25,13 +25,16 @@ The dataset contains 264 samples with 12 columns including gender, age, choleste
 | Class | Diabetes class (target variable) |
 
 ---
+## Objective
+
+To build a simple yet effective logistic regression model for predicting diabetes categories while understanding the role of correlated medical parameters and their impact on predictive performance.
 
 
 ## Project Description
 This project applies Logistic Regression to predict different classes (types) of diabetes based on key clinical and biochemical features such as HbA1c, BMI, Cholesterol, and Age.
 The goal is to demonstrate a complete machine learning workflow, starting from data preprocessing and exploratory data analysis (EDA) to multicollinearity detection (VIF), model training, and performance evaluation.
 
-The dataset used represents a multiclass classification problem — where patients are categorized into different diabetes levels.
+The dataset used represents a multiclass classification problem — where patients are categorized into different diabetes levels
 
  ## The project helps understand:
 
@@ -56,9 +59,14 @@ The dataset used represents a multiclass classification problem — where patien
 6. **Evaluation**
    - Confusion Matrix and Classification Report to assess performance.
 
+##  How VIF Was Used for Feature Selection
+- High VIF (Variance Inflation Factor) values indicate multicollinearity — when features are highly correlated with each other.
+- In this dataset, **AGE**, **BMI**, and **Chol** showed high VIF values, suggesting they share overlapping information with other variables.
+ However, removing them caused a drop in model accuracy, meaning these features still contribute valuable predictive information.
+ Therefore, each high-VIF feature was individually tested for its impact on accuracy.
+- Features were retained or removed based on their actual contribution to model performance rather than VIF value alone.
 
 ---
-
 ## 🧮 Results
 
 - **Model:** Logistic Regression  
@@ -73,14 +81,8 @@ The dataset used represents a multiclass classification problem — where patien
 - Checking **multicollinearity** using VIF  
 - Evaluating multiclass models using **classification report & confusion matrix**
 
----
-## ## How VIF Was Used for Feature Selection
-- High VIF (Variance Inflation Factor) values indicate multicollinearity — when features are highly correlated with each other.
-- In this dataset, **AGE**, **BMI**, and **Chol** showed high VIF values, suggesting they share overlapping information with other variables.
- However, removing them caused a drop in model accuracy, meaning these features still contribute valuable predictive information.
- Therefore, each high-VIF feature was individually tested for its impact on accuracy.
-- Features were retained or removed based on their actual contribution to model performance rather than VIF value alone.
 ```
+## requirements
 pandas
 numpy
 matplotlib
