@@ -62,7 +62,7 @@ The dataset used represents a multiclass classification problem — where patien
 ## 🧮 Results
 
 - **Model:** Logistic Regression  
-- **Accuracy:** *around 88-94% (varies by train-test split)*  
+- **Accuracy:** *around 94%*  
 - **Best features (by coefficient magnitude):** `HbA1c`, `BMI`, `Chol`
 
 ---
